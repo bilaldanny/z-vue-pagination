@@ -1,0 +1,37 @@
+{
+  "name": "z-vue-pagination",
+  "version": "1.0.0",
+  "description": "Awesome Vue 3 Pagination",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "author": "Bilal Younus",
+  "license": "ISC",
+  "keywords": [
+    "vue-awesome-paginate",
+    "vue",
+    "vue 3",
+    "paginate",
+    "pagination",
+    "vue-pagination",
+    "vue awesome paginate",
+    "vue.js 3",
+    "vue pagination",
+    "vue pagination component",
+    "vue pagination module",
+    "vue paginate",
+    "vue pagination",
+    "vue.js paginate",
+    "vue.js pagination"
+  ],
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.6"
+  },
+  "type": "module"
+}
