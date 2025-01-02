@@ -152,7 +152,7 @@ A complete z-vue-pagination component example with some custom CSS customization
 
 ##### Result of the above code:
 
-<img  src="./assets/demo.jpg"  width="500" />
+<img  src="./assets/demo.png"  width="500" />
 
 &nbsp;
 
@@ -168,7 +168,7 @@ as simple as this example:
 
 ##### Result of the above code:
 
-<img  src="./assets/demo1.jpg"  width="500" />
+<img  src="./assets/demo1.png"  width="500" />
 
 &nbsp;
 
@@ -190,7 +190,7 @@ Example: you can set items per single page, maximum pagination buttons to show a
 
 ##### Result of the above code:
 
-<img  src="./assets/demo1.jpg"  width="500" />
+<img  src="./assets/demo1.png"  width="500" />
 
 &nbsp;
 
@@ -245,7 +245,7 @@ You can hide/show Ending buttons to be able to navigate to first and last page o
 
 ##### Result of the above code:
 
-<img  src="./assets/demo2.jpg"  width="500" />
+<img  src="./assets/demo2.png"  width="500" />
 
 &nbsp;
 
@@ -279,7 +279,7 @@ You can hide prev/next buttons in two ways
 
 ##### Result of the above code:
 
-<img  src="./assets/demo3.jpg"  width="500" >
+<img  src="./assets/demo3.png"  width="500" >
 
 &nbsp;
 
@@ -303,7 +303,7 @@ You can change the content inside the prev/next buttons in two ways:
 
 ##### Result of the above code:
 
-<img  src="./assets/demo4.jpg"  width="500" />
+<img  src="./assets/demo4.png"  width="500" />
 
 &nbsp;
 
@@ -333,7 +333,7 @@ You can change the content inside the prev/next buttons in two ways:
 
 ##### Result of the above code:
 
-<img  src="./assets/demo5.jpg"  width="500" />
+<img  src="./assets/demo5.png"  width="500" />
 
 &nbsp;
 
@@ -362,7 +362,7 @@ Jump Buttons are extra layers on top of Prev/Next buttons, if you enable them th
 
 ##### Result of the above code:
 
-<img  src="./assets/demo6.jpg"  width="500" />
+<img  src="./assets/demo6.png"  width="500" />
 
 &nbsp;
 
@@ -409,7 +409,7 @@ There are complete supports for RTL and different localizations without using an
 
 ##### Result of the above code:
 
-<img  src="./assets/demo7.jpg"  width="500" />
+<img  src="./assets/demo7.png"  width="500" />
 
 &nbsp;
 
@@ -462,7 +462,7 @@ By default pagination buttons have the default html styles, you can customize ev
 
 ##### Result of the above code:
 
-<img  src="./assets/demo8.jpg"  width="500" />
+<img  src="./assets/demo8.png"  width="500" />
 
 You don't necessarily need to set class names for the elements if you don't want to, you can just use their default class names that are available in the class names table in the API section.
 
