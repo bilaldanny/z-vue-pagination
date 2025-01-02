@@ -170,7 +170,7 @@ as simple as this example:
 
 ##### Result of the above code:
 
-<img  src="./assets/demo.jpg"  width="500" />
+<img  src="./assets/demo1.jpg"  width="500" />
 
 &nbsp;
 
