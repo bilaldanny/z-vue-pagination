@@ -544,5 +544,5 @@ You don't necessarily need to set class names for the elements if you don't want
 
 Note that all the attributes in the table below can be written in both camel case and kebab case styles.
 
-| Key | Description | Type | Options | Default | Validations | 
+| Key | Description | Type | Options | Default | Validations 
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------- |  | -------- |----------------------------------------------------------------------------------------------------------------------------------------------------------- |
