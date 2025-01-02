@@ -568,3 +568,9 @@ All the attributes have a default value.
 | Key | Description | Type | Options | Default | Validations |
 | - | - | - | - | - | - |
 | showEndingButtons | Show First and Last page buttons on each endings of the pagination component | Boolean | true \| false | false |  |
+| hidePrevNext | Hide the Prev and Next buttons | Boolean | true \| false | false |  |
+| showBreakpointButtons | Show/Hide the breakpoint buttons | Boolean | true \| false | true |  |
+| disableBreakpointButtons | Enable/Disable the breakpoint buttons | Boolean | true \| false | false |  |
+| showJumpButtons | Show/Hide the jump buttons | Boolean | true \| false | false |  |
+| disablePagination | Enable/Disable the whole component buttons | Boolean | true \| false | false |  |
+| showDisabled | Show/Hide the disabled buttons | Boolean | true \| false | false |  |
