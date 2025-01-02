@@ -552,3 +552,4 @@ Note that all the attributes in the table below can be written in both camel cas
 | dir | Direction of the component (RTL Support) | String | "ltr" \| "rtl" | "ltr" | Must be one of either options |
 | type | HTML Element type of the pagination component | String | "button" \| "link" | "button" | Must be either a link or button |
 | linkUrl | The url string that the anchor tag is pointing to | String |  | "#" | required when type attribute is set to 'link', and must include "\[page\]" placeholder in order to be replaced with the actual page number during rendering |
+| locale | Localization of the component (currently only Arabic, English and Persian locales are supported, more localization options will be added! | String | "en" \| "ar" \| "ir" | "en" | Must be one of the available options) |
