@@ -37,6 +37,7 @@ const props = defineProps({
   },
   modelValue: {
     type: Number,
+    default: 1,
     required: true,
     validator: (value: number) => {
       const message = "v-model is required and must be greater than 0.";
