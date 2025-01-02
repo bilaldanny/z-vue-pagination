@@ -445,11 +445,30 @@ const startingBreakPointButtonIfCondition = computed(() => {
 
   return paginate.value.pages[0] >= 3;
 });
-const HideDisabled = computed(() => {
+const FirstHideDisabled = computed(() => {
   if(props.showDisabled == true){
     return true;
   }
-  return false;
+
+  if (isRtl.value) {
+    return paginate.value.pages[0] < totalPages.value;
+  }
+
+  return paginate.value.pages[0] >= 2;
+});
+
+const LastHideDisabled = computed(() => {
+  if(props.showDisabled == true){
+    return true;
+  }
+
+  if (isRtl.value) {
+    return paginate.value.pages[paginate.value.pages.length - 1] >= 2;
+  }
+
+  return (
+    paginate.value.pages[paginate.value.pages.length - 1] < totalPages.value
+  );
 });
 const endingBreakPointButtonIfCondition = computed(() => {
   if (isRtl.value) {
@@ -477,8 +496,11 @@ const lastButtonIfCondition = computed(() => {
   );
 });
 const firstPageButtonIfCondition = computed(() => {
-  if (currentPageRef.value === 1) return false;
-  return true;
+  if (isRtl.value) {
+    return paginate.value.pages[0] < totalPages.value;
+  }
+
+  return paginate.value.pages[0] >= 2;
 });
 const lastPageButtonIfCondition = computed(() => {
   if (currentPageRef.value === totalPages.value) return false;
@@ -514,7 +536,7 @@ if (props.type === "link" && !props.linkUrl.includes("[page]")) {
   <ul :class="paginationContainerClass">
     <!-- Go back to first page Button -->
     <li
-        v-if="showEndingButtons && HideDisabled"
+        v-if="showEndingButtons && FirstHideDisabled"
         :class="[
           firstPageItemClass,
           paginateItemsClass,
@@ -541,7 +563,7 @@ if (props.type === "link" && !props.linkUrl.includes("[page]")) {
 
     <!-- Backward Jump Button -->
     <li 
-      v-if="showJumpButtons && HideDisabled"
+      v-if="showJumpButtons && FirstHideDisabled"
       :class="[
         backwardJumpItemClass,
         paginateItemsClass,
@@ -798,7 +820,7 @@ if (props.type === "link" && !props.linkUrl.includes("[page]")) {
 
     <!-- Forward Jump Button -->
     <li 
-      v-if="showJumpButtons && HideDisabled"
+      v-if="showJumpButtons && LastHideDisabled"
       :class="[
         forwardJumpItemClass,
         paginateItemsClass,
@@ -839,7 +861,7 @@ if (props.type === "link" && !props.linkUrl.includes("[page]")) {
 
     <!-- Go forward to last page -->
     <li 
-      v-if="showEndingButtons && HideDisabled"
+      v-if="showEndingButtons && LastHideDisabled"
       :class="[
           lastPageItemClass,
           paginateItemsClass,

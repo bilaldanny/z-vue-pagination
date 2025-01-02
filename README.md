@@ -374,3 +374,175 @@ You can change the content inside the prev/next buttons in two ways:
 &nbsp;
 
 &nbsp;
+
+## Custom Slots
+
+**This 2nd method of injecting html through custom slots in to elements in the previous example is available for all the other controlling elements like breakpoint buttons and jump buttons etc...**
+
+You can see all the slots in the slots table at API section
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Show Jump Buttons
+
+Jump Buttons are extra layers on top of Prev/Next buttons, if you enable them they will appear at each ends of the component, you can customize and configure them just like any other elements of the component and if you click on them it will have the same behavior as clicking on breakppoint buttons which is jumping by (max-pages-show/2)
+
+```html
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  :showBreakpointButtons="false"
+  :showJumpButtons="true"
+/>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo6.jpg"  width="500" />
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Make the component SEO friendly
+
+Pagination components can have a great impact on SEO, it's important to make your pagination elements links, so that when crawlers crawl your page, they will be able to find the pagination elements and extract the links from them.
+
+In order to achive this you can replace the button elements with anchor tag elements by changing **type** attribute to "link" and specify a **linkUrl** attribute to tell crawlers and search engines where this pagination element is pointing to.
+
+**linkUrl** attribute must be a string url to where the pagination element is pointing to, and the string must include \[page\] placeholder, which will be replaced with the actual page number.
+
+example:
+
+```html
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  @click="onClickHandler"
+  type="link"
+  link-url="/blog/posts?page=[page]"
+/>
+```
+
+**Note:** Changing buttons to anchor tags won't affect the functionality or the behavior of the component, it's just a way to make the component SEO friendly. you will still have to handle the navigation logic yourself in **on-click** event attribute.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## RTL and Locale Support
+
+There are complete supports for RTL and different localizations without using any other 3rd party libraries
+
+```html
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  dir="rtl"
+  locale="ar"
+/>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo7.jpg"  width="500" />
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Custom Styles
+
+By default pagination buttons have the default html styles, you can customize every element of the component through the default class names that are set for each element, or you can set your own class names for any element you want.
+
+```html
+<template>
+  <z-vue-pagination
+    :total-items="50"
+    v-model="currentPage"
+    :items-per-page="5"
+    :max-pages-shown="5"
+    paginate-buttons-class="btn"
+    active-page-class="btn-active"
+    back-button-class="back-btn"
+    next-button-class="next-btn"
+  />
+</template>
+
+<style>
+  .btn {
+    height: 40px;
+
+    width: 40px;
+
+    border: none;
+
+    margin-inline: 5px;
+
+    cursor: pointer;
+  }
+
+  .back-btn {
+    background-color: red;
+  }
+
+  .next-btn {
+    background-color: red;
+  }
+
+  .btn-active {
+    background-color: blue;
+
+    color: white;
+  }
+</style>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo8.jpg"  width="500" />
+
+You don't necessarily need to set class names for the elements if you don't want to, you can just use their default class names that are available in the class names table in the API section.
+
+**Important Note:** If the <style> tag of the parent component is scoped, you have to use the ::deep combinator in order to apply the styles to the elements of the component.
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## API
+
+### Component Attributes
+
+Note that all the attributes in the table below can be written in both camel case and kebab case styles.
+
+| Key                                                    | Description                                                                                                                                                     | Options              | Default  | Validations                                                                                                                                                 |
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
