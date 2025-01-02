@@ -629,4 +629,37 @@ All the attributes have a default value.
 | startingBreakpointContent | Content to be shown in the starting breakpoint button | String | String \| Slot | ... | Must be either a string or a custom slot |
 | endingBreakpointButtonContent | Content to be shown in the ending breakpoint button | String | String \| Slot | ... | Must be either a string or a custom slot |
 | forwardJumpButtonContent | Content to be shown in the forward jump button | String | String \| Slot | >> | Must be either a string or a custom slot |
-| backwardJumpButtonContent | Content to be shown in the backward jump button | String | String \| Slot | << | Must be either a string or a custom slot |
+| backwardJumpButtonContent | Content to be shown in the backward jump button | String | String \| Slot | << | Must be either a string or a custom slot |&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+### Slot Names
+
+These slot names can be used for Vue Slots in order to inject custom html in to the target element
+
+| Slot Name                  |           Target           |
+| -------------------------- | :------------------------: |
+| prev-button                |        Prev Button         |
+| next-button                |        Next Button         |
+| backward-jump-button       |    Backward Jump Button    |
+| forward-jump-button        |    Forward Jump Button     |
+| starting-breakpoint-button | Starting Breakpoint Button |
+| ending-breakpoint-button   |  Ending Breakpoint Button  |
+| first-page-button          |     First Page Button      |
+| last-page-button           |      Last Page Button      |
+
+### Events
+
+| Event Name | Description                                                                                        | Parameters     |
+| ---------- | -------------------------------------------------------------------------------------------------- | -------------- |
+| click      | A function that runs when the user changes a page by clicking any of the elements of the component | (page: number) |
+
+## Author
+
+[Bilal Younus](https://github.com/bilaldanny)
+
+## License
+
+[The MIT License](http://opensource.org/licenses/MIT)
