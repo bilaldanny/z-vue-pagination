@@ -158,10 +158,6 @@ A complete z-vue-pagination component example with some custom CSS customization
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 ## Required Attributes
 
 Total required attributes to build a full pagination for your website is only two attributes, the component will handle all the other functionalities and attributes by default
@@ -175,10 +171,6 @@ as simple as this example:
 ##### Result of the above code:
 
 <img  src="./assets/demo1.jpg"  width="500" />
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
@@ -203,10 +195,6 @@ Example: you can set items per single page, maximum pagination buttons to show a
 ##### Result of the above code:
 
 <img  src="./assets/demo1.jpg"  width="500" />
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
@@ -246,8 +234,6 @@ You can Disable/Enable or Hide/Show them through attributes
 
 &nbsp;
 
-&nbsp;
-
 ## Show Ending Buttons (First and Last Page Buttons)
 
 You can hide/show Ending buttons to be able to navigate to first and last page of the pagination component
@@ -268,10 +254,6 @@ You can hide/show Ending buttons to be able to navigate to first and last page o
 ##### Result of the above code:
 
 <img  src="./assets/demo2.jpg"  width="500" />
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
@@ -308,10 +290,6 @@ You can hide prev/next buttons in two ways
 ##### Result of the above code:
 
 <img  src="./assets/demo3.jpg"  width="500" >
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
@@ -375,19 +353,11 @@ You can change the content inside the prev/next buttons in two ways:
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 ## Custom Slots
 
 **This 2nd method of injecting html through custom slots in to elements in the previous example is available for all the other controlling elements like breakpoint buttons and jump buttons etc...**
 
 You can see all the slots in the slots table at API section
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
@@ -411,10 +381,6 @@ Jump Buttons are extra layers on top of Prev/Next buttons, if you enable them th
 ##### Result of the above code:
 
 <img  src="./assets/demo6.jpg"  width="500" />
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
@@ -448,10 +414,6 @@ example:
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 ## RTL and Locale Support
 
 There are complete supports for RTL and different localizations without using any other 3rd party libraries
@@ -470,10 +432,6 @@ There are complete supports for RTL and different localizations without using an
 ##### Result of the above code:
 
 <img  src="./assets/demo7.jpg"  width="500" />
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
@@ -533,8 +491,6 @@ By default pagination buttons have the default html styles, you can customize ev
 You don't necessarily need to set class names for the elements if you don't want to, you can just use their default class names that are available in the class names table in the API section.
 
 **Important Note:** If the <style> tag of the parent component is scoped, you have to use the ::deep combinator in order to apply the styles to the elements of the component.
-
-&nbsp;
 
 &nbsp;
 
