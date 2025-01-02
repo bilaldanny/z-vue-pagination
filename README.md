@@ -2,7 +2,7 @@
 
 #### _The Vue.js 3 Pagination Library_
 
-<img  src="./assets/demo.gif"  alt="z-vue-pagination">
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo.gif"  alt="z-vue-pagination">
 
 [![bilaldanny - z-vue-pagination](https://img.shields.io/static/v1?label=bilaldanny&message=z-vue-pagination&color=yellow&logo=github)](https://github.com/bilaldanny/z-vue-pagination "Go to GitHub repo")
 
@@ -60,7 +60,7 @@ Z Vue Paginate is a modern and powerfull vue js pagination library with a large 
 
 &nbsp;
 
-![Demo](./assets/demo.gif)
+![Demo](https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo.gif)
 
 ## Requirements
 
@@ -152,7 +152,7 @@ A complete z-vue-pagination component example with some custom CSS customization
 
 ##### Result of the above code:
 
-<img  src="./assets/demo.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo.png"  width="500" />
 
 &nbsp;
 
@@ -168,7 +168,7 @@ as simple as this example:
 
 ##### Result of the above code:
 
-<img  src="./assets/demo1.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo1.png"  width="500" />
 
 &nbsp;
 
@@ -190,7 +190,7 @@ Example: you can set items per single page, maximum pagination buttons to show a
 
 ##### Result of the above code:
 
-<img  src="./assets/demo1.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo1.png"  width="500" />
 
 &nbsp;
 
@@ -245,7 +245,7 @@ You can hide/show Ending buttons to be able to navigate to first and last page o
 
 ##### Result of the above code:
 
-<img  src="./assets/demo2.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo2.png"  width="500" />
 
 &nbsp;
 
@@ -279,7 +279,7 @@ You can hide prev/next buttons in two ways
 
 ##### Result of the above code:
 
-<img  src="./assets/demo3.png"  width="500" >
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo3.png"  width="500" >
 
 &nbsp;
 
@@ -303,7 +303,7 @@ You can change the content inside the prev/next buttons in two ways:
 
 ##### Result of the above code:
 
-<img  src="./assets/demo4.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo4.png"  width="500" />
 
 &nbsp;
 
@@ -319,13 +319,13 @@ You can change the content inside the prev/next buttons in two ways:
 >
   <template #prev-button>
     <span>
-      <img src="./assets/backward-arrow-icon.png" height="18" />
+      <img src="backward-arrow-icon.png" height="18" />
     </span>
   </template>
 
   <template #next-button>
     <span>
-      <img src="./assets/forward-arrow-icon.png" height="18" />
+      <img src="forward-arrow-icon.png" height="18" />
     </span>
   </template>
 </z-vue-pagination>
@@ -333,7 +333,7 @@ You can change the content inside the prev/next buttons in two ways:
 
 ##### Result of the above code:
 
-<img  src="./assets/demo5.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo5.png"  width="500" />
 
 &nbsp;
 
@@ -362,7 +362,7 @@ Jump Buttons are extra layers on top of Prev/Next buttons, if you enable them th
 
 ##### Result of the above code:
 
-<img  src="./assets/demo6.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo6.png"  width="500" />
 
 &nbsp;
 
@@ -409,7 +409,7 @@ There are complete supports for RTL and different localizations without using an
 
 ##### Result of the above code:
 
-<img  src="./assets/demo7.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo7.png"  width="500" />
 
 &nbsp;
 
@@ -462,7 +462,7 @@ By default pagination buttons have the default html styles, you can customize ev
 
 ##### Result of the above code:
 
-<img  src="./assets/demo8.png"  width="500" />
+<img  src="https://raw.githubusercontent.com/bilaldanny/z-vue-pagination/main/assets/demo8.png"  width="500" />
 
 You don't necessarily need to set class names for the elements if you don't want to, you can just use their default class names that are available in the class names table in the API section.
 
