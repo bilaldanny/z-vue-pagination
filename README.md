@@ -545,6 +545,10 @@ You don't necessarily need to set class names for the elements if you don't want
 Note that all the attributes in the table below can be written in both camel case and kebab case styles.
 
 | Key | Description | Type | Options | Default | Validations |
-
-| Key | Description | Type | Options | Default | Validations |
 | - | - | - | - | - | - |
+| totalItems | Total Number of items that you want to paginate | Number |  |  | Required |
+| itemsPerPage | Total Number of items that you explicitly want to show per one page | Number |  | 10 | Must be greater than 0 |
+| v-model | Current active page | Number |  | 1 | Required and must be greater than 0 |
+| dir | Direction of the component (RTL Support) | String | "ltr" \| "rtl" | "ltr" | Must be one of either options |
+| type | HTML Element type of the pagination component | String | "button" \| "link" | "button" | Must be either a link or button |
+| linkUrl | The url string that the anchor tag is pointing to | String |  | "#" | required when type attribute is set to 'link', and must include "\[page\]" placeholder in order to be replaced with the actual page number during rendering |
