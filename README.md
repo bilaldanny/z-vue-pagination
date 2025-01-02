@@ -156,8 +156,6 @@ A complete z-vue-pagination component example with some custom CSS customization
 
 &nbsp;
 
-&nbsp;
-
 ## Required Attributes
 
 Total required attributes to build a full pagination for your website is only two attributes, the component will handle all the other functionalities and attributes by default
@@ -171,8 +169,6 @@ as simple as this example:
 ##### Result of the above code:
 
 <img  src="./assets/demo1.jpg"  width="500" />
-
-&nbsp;
 
 &nbsp;
 
@@ -195,8 +191,6 @@ Example: you can set items per single page, maximum pagination buttons to show a
 ##### Result of the above code:
 
 <img  src="./assets/demo1.jpg"  width="500" />
-
-&nbsp;
 
 &nbsp;
 
@@ -232,8 +226,6 @@ You can Disable/Enable or Hide/Show them through attributes
 
 &nbsp;
 
-&nbsp;
-
 ## Show Ending Buttons (First and Last Page Buttons)
 
 You can hide/show Ending buttons to be able to navigate to first and last page of the pagination component
@@ -254,8 +246,6 @@ You can hide/show Ending buttons to be able to navigate to first and last page o
 ##### Result of the above code:
 
 <img  src="./assets/demo2.jpg"  width="500" />
-
-&nbsp;
 
 &nbsp;
 
@@ -293,8 +283,6 @@ You can hide prev/next buttons in two ways
 
 &nbsp;
 
-&nbsp;
-
 ## Change buttons content
 
 You can change the content inside the prev/next buttons in two ways:
@@ -316,8 +304,6 @@ You can change the content inside the prev/next buttons in two ways:
 ##### Result of the above code:
 
 <img  src="./assets/demo4.jpg"  width="500" />
-
-&nbsp;
 
 &nbsp;
 
@@ -351,15 +337,11 @@ You can change the content inside the prev/next buttons in two ways:
 
 &nbsp;
 
-&nbsp;
-
 ## Custom Slots
 
 **This 2nd method of injecting html through custom slots in to elements in the previous example is available for all the other controlling elements like breakpoint buttons and jump buttons etc...**
 
 You can see all the slots in the slots table at API section
-
-&nbsp;
 
 &nbsp;
 
@@ -381,8 +363,6 @@ Jump Buttons are extra layers on top of Prev/Next buttons, if you enable them th
 ##### Result of the above code:
 
 <img  src="./assets/demo6.jpg"  width="500" />
-
-&nbsp;
 
 &nbsp;
 
@@ -412,8 +392,6 @@ example:
 
 &nbsp;
 
-&nbsp;
-
 ## RTL and Locale Support
 
 There are complete supports for RTL and different localizations without using any other 3rd party libraries
@@ -432,8 +410,6 @@ There are complete supports for RTL and different localizations without using an
 ##### Result of the above code:
 
 <img  src="./assets/demo7.jpg"  width="500" />
-
-&nbsp;
 
 &nbsp;
 
@@ -494,8 +470,6 @@ You don't necessarily need to set class names for the elements if you don't want
 
 &nbsp;
 
-&nbsp;
-
 ## API
 
 ### Component Attributes
@@ -516,8 +490,6 @@ Note that all the attributes in the table below can be written in both camel cas
 
 &nbsp;
 
-&nbsp;
-
 ### Hide\Show Attributes
 All the attributes have a default value.
 
@@ -530,8 +502,6 @@ All the attributes have a default value.
 | showJumpButtons | Show/Hide the jump buttons | Boolean | true \| false | false |  |
 | disablePagination | Enable/Disable the whole component buttons | Boolean | true \| false | false |  |
 | showDisabled | Show/Hide the disabled buttons | Boolean | true \| false | false |  |
-
-&nbsp;
 
 &nbsp;
 
@@ -571,8 +541,6 @@ All the class names have a default value.
 
 &nbsp;
 
-&nbsp;
-
 ### Content Attributes
 All the attributes have a default value.
 
@@ -586,8 +554,6 @@ All the attributes have a default value.
 | endingBreakpointButtonContent | Content to be shown in the ending breakpoint button | String | String \| Slot | ... | Must be either a string or a custom slot |
 | forwardJumpButtonContent | Content to be shown in the forward jump button | String | String \| Slot | >> | Must be either a string or a custom slot |
 | backwardJumpButtonContent | Content to be shown in the backward jump button | String | String \| Slot | << | Must be either a string or a custom slot |&nbsp;
-
-&nbsp;
 
 &nbsp;
 
