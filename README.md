@@ -548,8 +548,23 @@ Note that all the attributes in the table below can be written in both camel cas
 | - | - | - | - | - | - |
 | totalItems | Total Number of items that you want to paginate | Number |  |  | Required |
 | itemsPerPage | Total Number of items that you explicitly want to show per one page | Number |  | 10 | Must be greater than 0 |
+| maxPagesShown | Maximum pagination buttons (Number Buttons only) to be shown | Number |  | 5 | Must be greater than 0 |
 | v-model | Current active page | Number |  | 1 | Required and must be greater than 0 |
 | dir | Direction of the component (RTL Support) | String | "ltr" \| "rtl" | "ltr" | Must be one of either options |
 | type | HTML Element type of the pagination component | String | "button" \| "link" | "button" | Must be either a link or button |
 | linkUrl | The url string that the anchor tag is pointing to | String |  | "#" | required when type attribute is set to 'link', and must include "\[page\]" placeholder in order to be replaced with the actual page number during rendering |
 | locale | Localization of the component (currently only Arabic, English and Persian locales are supported, more localization options will be added! | String | "en" \| "ar" \| "ir" | "en" | Must be one of the available options) |
+| onClick (Deprecated, use @click event handler instead) | A function that runs when the user changes a page by clicking any of the elements of the component (Passing the new active page to the function as a parameter) | Function |  | ()=>{} |  |
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+### Hide\Show Attributes
+All the attributes have a default value.
+
+| Key | Description | Type | Options | Default | Validations |
+| - | - | - | - | - | - |
+| showEndingButtons | Show First and Last page buttons on each endings of the pagination component | Boolean | true \| false | false |  |
