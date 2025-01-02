@@ -544,6 +544,7 @@ You don't necessarily need to set class names for the elements if you don't want
 
 Note that all the attributes in the table below can be written in both camel case and kebab case styles.
 
-| Key                                                    | Description                                                                                                                                                     | Options              | Default  | Validations                                                                                                                                                 |
+| Key | Description | Options | Default | Validations | 
 | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| totalItems | Total Number of items that you want to paginate | Number | | Required|
+| totalItems | Total Number of items that you want to paginate | Number |  | Required |
+| itemsPerPage | Total Number of items that you explicitly want to show per one page | Number | 10 | Must be greater than 0 |
