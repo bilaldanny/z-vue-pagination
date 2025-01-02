@@ -618,11 +618,11 @@ All the attributes have a default value.
 
 | Key | Description | Type | Options | Default | Validations |
 | - | - | - | - | - | - |
-| firstPageContent | Content to be shown in the first page button |  String \| Slot | String | First | Must be either a string or a custom slot |
-| lastPageContent | Content to be shown in the last page button |  String \| Slot | String | Last | Must be either a string or a custom slot |
-| prevButtonContent | Content to be shown in the prev button |  String \| Slot | String | Prev | Must be either a string or a custom slot |
-| nextButtonContent | Content to be shown in the next button |  String \| Slot | String | Next | Must be either a string or a custom slot |
-| startingBreakpointContent | Content to be shown in the starting breakpoint button |  String \| Slot | String | ... | Must be either a string or a custom slot |
-| endingBreakpointButtonContent | Content to be shown in the ending breakpoint button |  String \| Slot | String | ... | Must be either a string or a custom slot |
-| forwardJumpButtonContent | Content to be shown in the forward jump button |  String \| Slot | String | >> | Must be either a string or a custom slot |
-| backwardJumpButtonContent | Content to be shown in the backward jump button |  String \| Slot | String | << | Must be either a string or a custom slot |
+| firstPageContent | Content to be shown in the first page button | String | String \| Slot | First | Must be either a string or a custom slot |
+| lastPageContent | Content to be shown in the last page button | String | String \| Slot | Last | Must be either a string or a custom slot |
+| prevButtonContent | Content to be shown in the prev button | String | String \| Slot | Prev | Must be either a string or a custom slot |
+| nextButtonContent | Content to be shown in the next button | String | String \| Slot | Next | Must be either a string or a custom slot |
+| startingBreakpointContent | Content to be shown in the starting breakpoint button | String | String \| Slot | ... | Must be either a string or a custom slot |
+| endingBreakpointButtonContent | Content to be shown in the ending breakpoint button | String | String \| Slot | ... | Must be either a string or a custom slot |
+| forwardJumpButtonContent | Content to be shown in the forward jump button | String | String \| Slot | >> | Must be either a string or a custom slot |
+| backwardJumpButtonContent | Content to be shown in the backward jump button | String | String \| Slot | << | Must be either a string or a custom slot |
