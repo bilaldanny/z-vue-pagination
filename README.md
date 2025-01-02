@@ -6,7 +6,7 @@
 
 [![bilaldanny - z-vue-pagination](https://img.shields.io/static/v1?label=bilaldanny&message=z-vue-pagination&color=yellow&logo=github)](https://github.com/bilaldanny/z-vue-pagination "Go to GitHub repo")
 
-[![npm version](https://img.shields.io/npm/v/vue-awesome-paginate.svg)](http://badge.fury.io/js/vue-awesome-paginate) [![npm downloads](https://img.shields.io/npm/dm/vue-awesome-paginate.svg)](http://badge.fury.io/js/z-vue-pagination) [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/bilaldanny/z-vue-pagination/blob/main/LICENSE)
+[![npm version](https://img.shields.io/npm/v/z-vue-pagination.svg)](http://badge.fury.io/js/z-vue-pagination) [![npm downloads](https://img.shields.io/npm/dm/z-vue-pagination.svg)](http://badge.fury.io/js/z-vue-pagination) [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/bilaldanny/z-vue-pagination/blob/main/LICENSE)
 
 Z Vue Paginate is a modern and powerfull vue js pagination library with a large set of various pagination components that are flexible, very lightweight, SEO friendly, customizable with pure CSS and very easy to use.
 
@@ -171,6 +171,201 @@ as simple as this example:
 ##### Result of the above code:
 
 <img  src="./assets/demo1.jpg"  width="500" />
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Configurations
+
+You have total control over your pagination component, you can configure every element's appearence, number and behavior.
+
+Example: you can set items per single page, maximum pagination buttons to show and a click event handler.
+
+```html
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  @click="onClickHandler"
+/>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo1.jpg"  width="500" />
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## (Show/Hide) or (Enable/Disable) breakpoint buttons
+
+Breakpoint buttons are clickable and shown by default, if you click on them you will get a jump of max-pages-shown / 2 in the pagination
+
+You can Disable/Enable or Hide/Show them through attributes
+
+```html
+<!-- Hide Breakpoint Buttons -->
+
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  :showBreakpointButtons="true"
+  @click="onClickHandler"
+/>
+
+<!-- Disable Breakpoint Buttons -->
+
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  @click="onClickHandler"
+  :disableBreakpointButtons="true"
+/>
+```
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Show Ending Buttons (First and Last Page Buttons)
+
+You can hide/show Ending buttons to be able to navigate to first and last page of the pagination component
+
+```html
+<!-- Hide the Prev/Next buttons permanently -->
+
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  :showEndingButtons="true"
+  :showDisabled="true"
+/>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo2.jpg"  width="500" />
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Hide Prev/Next buttons
+
+You can hide prev/next buttons in two ways
+
+```html
+<!-- Hide the Prev/Next buttons permanently -->
+
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  @click="onClickHandler"
+  :hide-prev-next="true"
+/>
+
+<!-- Hide the Prev button only when pagination is at the beginning and hide next button only when pagination reaches the end -->
+
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  @click="onClickHandler"
+  :hide-prev-next-when-ends="true"
+/>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo3.jpg"  width="500" >
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Change buttons content
+
+You can change the content inside the prev/next buttons in two ways:
+
+1- Pass a string to **prev-button-content** or **next-button-content** attributes
+
+```html
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  @click="onClickHandler"
+  prev-button-content="<<<"
+  next-button-content=">>>"
+/>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo4.jpg"  width="500" />
+
+&nbsp;
+
+&nbsp;
+
+2- Inject your own HTML content into the buttons through custom slots
+
+```html
+<z-vue-pagination
+  :total-items="50"
+  v-model="currentPage"
+  :items-per-page="5"
+  :max-pages-shown="5"
+  @click="onClickHandler"
+>
+  <template #prev-button>
+    <span>
+      <img src="./assets/backward-arrow-icon.png" height="18" />
+    </span>
+  </template>
+
+  <template #next-button>
+    <span>
+      <img src="./assets/forward-arrow-icon.png" height="18" />
+    </span>
+  </template>
+</z-vue-pagination>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo5.jpg"  width="500" />
 
 &nbsp;
 
