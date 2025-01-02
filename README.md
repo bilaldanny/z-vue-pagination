@@ -57,3 +57,125 @@ Z Vue Paginate is a modern and powerfull vue js pagination library with a large 
 &nbsp;
 
 ![Demo](./assets/demo.gif)
+
+## Requirements
+
+This package supports vue.js, you are required to use:
+
+- Vue.js 3.x
+
+&nbsp;
+
+## Installation
+
+To use the package you must first add the it to your dependencies in your project.
+
+```bash
+
+$  npm  i  z-vue-pagination
+
+```
+
+Then you have to register the package in your project as well as import a necessary css file that comes with the package.
+
+### Vue.js
+
+Global Import Component
+
+```javascript
+import { createApp } from "vue";
+
+import App from "./App.vue";
+
+// import the package
+
+import ZVuePagination from 'z-vue-pagination';
+
+// Register the package
+
+createApp(App).use(ZVuePagination).mount("#app");
+```
+
+Local Import Component
+
+```javascript
+import ZVuePagination from 'z-vue-pagination';
+
+// Register the package
+
+export default {
+  ...
+  components: {
+    ZVuePagination
+  }
+  ...
+}
+```
+
+&nbsp;
+
+## Usage
+
+A complete z-vue-pagination component example with some custom CSS customization would be like this:
+
+```html
+<script setup lang="ts">
+  import {ref} from 'vue'
+
+  const onClickHandler = (page: number) => {
+    console.log(page);
+  };
+
+  const currentPage = ref(1);
+  const totalItems = 150;
+  const perPage = 10;
+</script>
+
+<template>
+  <z-vue-pagination 
+    :totalItems="totalItems"
+    :items-per-page="perPage"
+    :max-pages-shown="5"
+    v-model="currentPage"
+    :showDisabled="true"
+    :disableBreakpointButtons="true"
+    :showEndingButtons="true"
+    :showJumpButtons="true"
+    @click="onClickHandler"
+  />
+</template>
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo.jpg"  width="500" />
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Required Attributes
+
+Total required attributes to build a full pagination for your website is only two attributes, the component will handle all the other functionalities and attributes by default
+
+as simple as this example:
+
+```html
+<z-vue-pagination :total-items="200" v-model="currentPage" />
+```
+
+##### Result of the above code:
+
+<img  src="./assets/demo.jpg"  width="500" />
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
