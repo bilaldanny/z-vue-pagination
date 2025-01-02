@@ -544,7 +544,8 @@ You don't necessarily need to set class names for the elements if you don't want
 
 Note that all the attributes in the table below can be written in both camel case and kebab case styles.
 
-| Key | Description | Type | Options | Default | Validations | | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Key | Description | Type | Options | Default | Validations | 
+| ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- | -------- |  | -------- |----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | totalItems | Total Number of items that you want to paginate | Number |  |  | Required |
 | itemsPerPage | Total Number of items that you explicitly want to show per one page | Number |  | 10 | Must be greater than 0 |
 | v-model | Current active page | Number |  | 1 | Required and must be greater than 0 |
