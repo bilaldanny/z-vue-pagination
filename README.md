@@ -44,7 +44,11 @@ Z Vue Paginate is a modern and powerfull vue js pagination library with a large 
 
 - [**_Component Attributes_**](#Component-Attributes)
 
+- [**_Hide\Show Attributes_**](#Hide\Show-Attributes)
+
 - [**_Class Name Attributes_**](#Class-Name-Attributes)
+
+- [**_Content Attributes_**](#Content-Attributes)
 
 - [**_Slot Names_**](#Slot-Names)
 
@@ -575,7 +579,7 @@ All the attributes have a default value.
 
 &nbsp;
 
-### Class Attributes
+### Class Name Attributes
 All the class names have a default value.
 
 | Key | Description | Type | Options | Default | Validations |
