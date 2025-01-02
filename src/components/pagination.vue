@@ -184,10 +184,6 @@ const props = defineProps({
     type: String,
     default: "first-button",
   },
-  lastButtonClass: {
-    type: String,
-    default: "last-button",
-  },
   numberButtonsClass: {
     type: String,
     default: "number-buttons",
@@ -775,7 +771,6 @@ if (props.type === "link" && !props.linkUrl.includes("[page]")) {
         :href="navigationHandler(isRtl ? 1 : totalPages)"
         @click.prevent="onClickHandler(isRtl ? 1 : totalPages)"
         :class="[
-          lastButtonClass,
           paginateButtonsClass,
           disablePagination ? disabledPaginateButtonsClass : '',
           disablePagination ? disabledLastButtonClass : '',

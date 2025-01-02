@@ -536,8 +536,6 @@ You don't necessarily need to set class names for the elements if you don't want
 
 &nbsp;
 
-&nbsp;
-
 ## API
 
 ### Component Attributes
@@ -560,8 +558,6 @@ Note that all the attributes in the table below can be written in both camel cas
 
 &nbsp;
 
-&nbsp;
-
 ### Hide\Show Attributes
 All the attributes have a default value.
 
@@ -574,3 +570,59 @@ All the attributes have a default value.
 | showJumpButtons | Show/Hide the jump buttons | Boolean | true \| false | false |  |
 | disablePagination | Enable/Disable the whole component buttons | Boolean | true \| false | false |  |
 | showDisabled | Show/Hide the disabled buttons | Boolean | true \| false | false |  |
+
+&nbsp;
+
+&nbsp;
+
+### Class Attributes
+All the class names have a default value.
+
+| Key | Description | Type | Options | Default | Validations |
+| - | - | - | - | - | - |
+| paginationContainerClass | Styles for this class will be applied for the container of the whole component | String |  | pagination-container |  |
+| nextItemClass | Styles for this class will be applied for the next button li | String |  | next |  |
+| nextButtonClass | Styles for this class will be applied for the next button | String |  | next-button |  |
+| disabledNextButtonClass | Styles for this class will be applied for the next button disabled | String |  | disabled-next-button |  |
+| backItemClass | Styles for this class will be applied for the back button li | String |  | previous |  |
+| backButtonClass | Styles for this class will be applied for the back button | String |  | back-button |  |
+| disabledBackButtonClass | Styles for this class will be applied for the back button disabled | String |  | disabled-back-button |  |
+| activeItemClass | Styles for this class will be applied for the active li | String |  | active |  |
+| activePageClass | Styles for this class will be applied for the active button | String |  | active-page |  |
+| firstPageButtonClass | Styles for this class will be applied for the first page button | String |  | first-page-button |  |
+| firstPageItemClass | Styles for this class will be applied for the first page li | String |  | first-page-item |  |
+| paginateItemsClass | A global class name, styles for this class will be applied for all of the li inside the component | String |  | paginate_button page-item |  |
+| paginateButtonsClass | A global class name, styles for this class will be applied for all of the button inside the component | String |  | page-link |  |
+| disabledPaginateButtonsClass | A global class name, styles for this class will be applied for all of the disabled button inside the component | String |  | disabled |  |
+| disabledPaginateItemsClass | A global class name, styles for this class will be applied for all of the disabled li inside the component | String |  | disabled |  |
+| numberButtonsClass | A global class name, styles for this class will be applied for all of the number buttons inside the component | String |  | number-buttons |  |
+| lastPageItemClass | Styles for this class will be applied for the last page button li | String |  | last_page_item |  |
+| lastPageButtonClass | Styles for this class will be applied for the last page button | String |  | last-page-button |  |
+| disabledLastButtonClass | Styles for this class will be applied for the last page button disabled | String |  | disabled-last-button |  |
+| startingBreakpointButtonClass | Styles for this class will be applied for the starting breakpoint button | String |  | starting-breakpoint-button |  |
+| endingBreakpointButtonClass | Styles for this class will be applied for the ending breakpoint button | String |  | ending-breakpoint-button |  |
+| disabledBreakPointButtonClass | Styles for this class will be applied for the breakpoint button disabled | String |  | disabled-breakpoint-button |  |
+| forwardJumpItemClass | Styles for this class will be applied for the forward jump item | String |  | forward_jump_item |  |
+| forwardJumpButtonClass | Styles for this class will be applied for the forward jump button | String |  | forward-jump-button |  |
+| disabledForwardJumpButtonClass | Styles for this class will be applied for the forward jump button disabled | String |  | disabled-forward-jump-button |  |
+| backwardJumpItemClass | Styles for this class will be applied for the backward jump item | String |  | backward-page-jump |  |
+| backwardJumpButtonClass | Styles for this class will be applied for the backward jump button | String |  | backward-jump-button |  |
+| disabledBackwardJumpButtonClass | Styles for this class will be applied for the backward jump button disabled | String |  | disabled-backward-jump-button |  |
+
+&nbsp;
+
+&nbsp;
+
+### Content Attributes
+All the attributes have a default value.
+
+| Key | Description | Type | Options | Default | Validations |
+| - | - | - | - | - | - |
+| firstPageContent | Content to be shown in the first page button |  String \| Slot | String | First | Must be either a string or a custom slot |
+| lastPageContent | Content to be shown in the last page button |  String \| Slot | String | Last | Must be either a string or a custom slot |
+| prevButtonContent | Content to be shown in the prev button |  String \| Slot | String | Prev | Must be either a string or a custom slot |
+| nextButtonContent | Content to be shown in the next button |  String \| Slot | String | Next | Must be either a string or a custom slot |
+| startingBreakpointContent | Content to be shown in the starting breakpoint button |  String \| Slot | String | ... | Must be either a string or a custom slot |
+| endingBreakpointButtonContent | Content to be shown in the ending breakpoint button |  String \| Slot | String | ... | Must be either a string or a custom slot |
+| forwardJumpButtonContent | Content to be shown in the forward jump button |  String \| Slot | String | >> | Must be either a string or a custom slot |
+| backwardJumpButtonContent | Content to be shown in the backward jump button |  String \| Slot | String | << | Must be either a string or a custom slot |
