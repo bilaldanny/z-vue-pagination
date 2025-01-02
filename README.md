@@ -44,7 +44,7 @@ Z Vue Paginate is a modern and powerfull vue js pagination library with a large 
 
 - [**_Component Attributes_**](#Component-Attributes)
 
-- [**_Hide Show Attributes_**](#Hide\Show-Attributes)
+- [**_Hide\Show Attributes_**](#HideShow-Attributes)
 
 - [**_Class Name Attributes_**](#Class-Name-Attributes)
 
