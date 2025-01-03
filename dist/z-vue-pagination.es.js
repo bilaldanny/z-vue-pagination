@@ -1,5 +1,5 @@
-import { defineComponent as D, toRef as q, computed as f, openBlock as d, createElementBlock as b, normalizeClass as o, createBlock as B, resolveDynamicComponent as P, withModifiers as c, withCtx as k, renderSlot as I, createTextVNode as y, toDisplayString as h, createCommentVNode as w, Fragment as F, renderList as A } from "vue";
-const R = { key: 5 }, H = { key: 6 }, O = /* @__PURE__ */ D({
+import { defineComponent as F, toRef as q, computed as b, openBlock as d, createElementBlock as v, normalizeClass as o, createBlock as B, resolveDynamicComponent as P, withModifiers as c, withCtx as k, renderSlot as I, createTextVNode as y, toDisplayString as h, createCommentVNode as w, Fragment as A, renderList as H } from "vue";
+const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
   __name: "pagination",
   props: {
     // Configuration props
@@ -10,10 +10,10 @@ const R = { key: 5 }, H = { key: 6 }, O = /* @__PURE__ */ D({
     itemsPerPage: {
       type: Number,
       default: 10,
-      validator: (t) => {
-        if (t <= 0) {
-          const s = "itemsPerPage attribute must be greater than 0.";
-          throw console.error(s), new TypeError(s);
+      validator: (e) => {
+        if (e <= 0) {
+          const u = "itemsPerPage attribute must be greater than 0.";
+          throw console.error(u), new TypeError(u);
         }
         return !0;
       }
@@ -21,49 +21,50 @@ const R = { key: 5 }, H = { key: 6 }, O = /* @__PURE__ */ D({
     currentPage: {
       type: Number,
       default: 1,
-      validator: (t) => {
-        const s = "currentPage attribute must be greater than 0.";
-        if (t <= 0)
-          throw console.error(s), new TypeError(s);
+      validator: (e) => {
+        const u = "currentPage attribute must be greater than 0.";
+        if (e <= 0)
+          throw console.error(u), new TypeError(u);
         return !0;
       }
     },
     modelValue: {
       type: Number,
+      default: 1,
       required: !0,
-      validator: (t) => {
-        const s = "v-model is required and must be greater than 0.";
-        if (t <= 0)
-          throw console.error(s), new TypeError(s);
+      validator: (e) => {
+        const u = "v-model is required and must be greater than 0.";
+        if (e <= 0)
+          throw console.error(u), new TypeError(u);
         return !0;
       }
     },
     maxPagesShown: {
       type: Number,
       default: 5,
-      validator: (t) => {
-        const s = "maxPagesShown attribute must be greater than 0.";
-        if (t <= 0)
-          throw console.error(s), new TypeError(s);
+      validator: (e) => {
+        const u = "maxPagesShown attribute must be greater than 0.";
+        if (e <= 0)
+          throw console.error(u), new TypeError(u);
         return !0;
       }
     },
     dir: {
       type: String,
       default: "ltr",
-      validator: (t) => {
-        const s = 'dir attribute must be either "ltr" or "rtl".';
-        if (t !== "ltr" && t !== "rtl")
-          throw console.error(s), new TypeError(s);
+      validator: (e) => {
+        const u = 'dir attribute must be either "ltr" or "rtl".';
+        if (e !== "ltr" && e !== "rtl")
+          throw console.error(u), new TypeError(u);
         return !0;
       }
     },
     type: {
       type: String,
       default: "button",
-      validator: (t) => {
-        const s = ["link", "button"], a = "type attribute must be one of the following: " + s.join(", ");
-        if (s.indexOf(t) === -1)
+      validator: (e) => {
+        const u = ["link", "button"], a = "type attribute must be one of the following: " + u.join(", ");
+        if (u.indexOf(e) === -1)
           throw console.error(a), new TypeError(a);
         return !0;
       }
@@ -76,9 +77,9 @@ const R = { key: 5 }, H = { key: 6 }, O = /* @__PURE__ */ D({
     locale: {
       type: String,
       default: "en",
-      validator: (t) => {
-        const s = ["en", "ar", "ir"], a = "locale attribute must be one of the following: " + s.join(", ");
-        if (s.indexOf(t) === -1)
+      validator: (e) => {
+        const u = ["en", "ar", "ir"], a = "locale attribute must be one of the following: " + u.join(", ");
+        if (u.indexOf(e) === -1)
           throw console.error(a), new TypeError(a);
         return !0;
       }
@@ -159,10 +160,6 @@ const R = { key: 5 }, H = { key: 6 }, O = /* @__PURE__ */ D({
     firstButtonClass: {
       type: String,
       default: "first-button"
-    },
-    lastButtonClass: {
-      type: String,
-      default: "last-button"
     },
     numberButtonsClass: {
       type: String,
@@ -271,354 +268,353 @@ const R = { key: 5 }, H = { key: 6 }, O = /* @__PURE__ */ D({
     }
   },
   emits: ["update:modelValue", "click"],
-  setup(t, { emit: s }) {
-    const a = t;
+  setup(e, { emit: u }) {
+    const a = e;
     if (a.currentPage && !a.modelValue)
       throw new Error(
         "currentPage/current-page is now deprecated, use v-model instead to set the current page."
       );
     if (!a.modelValue)
       throw new TypeError("v-model is required for the paginate component.");
-    const e = q(a, "modelValue"), J = s, v = (n) => {
-      n !== e.value && (n > u.value || n < 1 || a.disablePagination || (J("update:modelValue", n), J("click", n)));
-    }, $ = (n) => {
+    const t = q(a, "modelValue"), J = u, f = (l) => {
+      l !== t.value && (l > s.value || l < 1 || a.disablePagination || (J("update:modelValue", l), J("click", l)));
+    }, $ = (l) => {
       switch (a.locale) {
         case "en":
-          return n;
+          return l;
         case "ar":
-          return n.toLocaleString("ar-SA");
+          return l.toLocaleString("ar-SA");
         case "ir":
-          return n.toLocaleString("fa-IR");
+          return l.toLocaleString("fa-IR");
         default:
-          return n;
+          return l;
       }
-    }, C = (n) => a.type !== "link" ? "" : a.linkUrl.replace("[page]", n.toString()), u = f(
+    }, C = (l) => a.type !== "link" ? "" : a.linkUrl.replace("[page]", l.toString()), s = b(
       () => Math.ceil(a.totalItems / a.itemsPerPage)
-    ), g = f(() => {
-      let n, i;
-      if (u.value <= a.maxPagesShown)
-        n = 1, i = u.value;
+    ), r = b(() => {
+      let l, i;
+      if (s.value <= a.maxPagesShown)
+        l = 1, i = s.value;
       else {
-        let x = Math.floor(a.maxPagesShown / 2), E = Math.ceil(a.maxPagesShown / 2) - 1;
-        e.value <= x ? (n = 1, i = a.maxPagesShown) : e.value + E >= u.value ? (n = u.value - a.maxPagesShown + 1, i = u.value) : (n = e.value - x, i = e.value + E);
+        let x = Math.floor(a.maxPagesShown / 2), N = Math.ceil(a.maxPagesShown / 2) - 1;
+        t.value <= x ? (l = 1, i = a.maxPagesShown) : t.value + N >= s.value ? (l = s.value - a.maxPagesShown + 1, i = s.value) : (l = t.value - x, i = t.value + N);
       }
-      let r = Array.from(Array(i + 1 - n).keys()).map(
-        (x) => n + x
+      let g = Array.from(Array(i + 1 - l).keys()).map(
+        (x) => l + x
       );
-      return a.dir === "rtl" && (r = r.reverse()), {
+      return a.dir === "rtl" && (g = g.reverse()), {
         totalItems: a.totalItems,
-        currentPage: e.value,
+        currentPage: t.value,
         itemsPerPage: a.itemsPerPage,
-        totalPages: u,
-        startPage: n,
+        totalPages: s,
+        startPage: l,
         endPage: i,
-        pages: r
+        pages: g
       };
-    }), l = f(() => a.dir === "rtl"), N = f(() => a.showDisabled == !0 ? !0 : l.value ? e.value !== u.value : e.value !== 1), T = f(() => a.showDisabled == !0 ? !0 : l.value ? e.value !== 1 : e.value !== u.value), j = f(() => l.value ? g.value.pages[0] < u.value - 1 : g.value.pages[0] >= 3), M = f(() => a.showDisabled == !0), L = f(() => l.value ? g.value.pages[g.value.pages.length - 1] >= 3 : g.value.pages[g.value.pages.length - 1] < u.value - 1), V = f(() => l.value ? g.value.pages[0] < u.value : g.value.pages[0] >= 2), U = f(() => l.value ? g.value.pages[g.value.pages.length - 1] >= 2 : g.value.pages[g.value.pages.length - 1] < u.value), m = f(() => e.value !== 1), S = f(() => e.value !== u.value);
+    }), n = b(() => a.dir === "rtl"), T = b(() => a.showDisabled == !0 ? !0 : n.value ? t.value !== s.value : t.value !== 1), j = b(() => a.showDisabled == !0 ? !0 : n.value ? t.value !== 1 : t.value !== s.value), L = b(() => n.value ? r.value.pages[0] < s.value - 1 : r.value.pages[0] >= 3), M = b(() => a.showDisabled == !0 ? !0 : n.value ? r.value.pages[0] < s.value : r.value.pages[0] >= 2), E = b(() => a.showDisabled == !0 ? !0 : n.value ? r.value.pages[r.value.pages.length - 1] >= 2 : r.value.pages[r.value.pages.length - 1] < s.value), D = b(() => n.value ? r.value.pages[r.value.pages.length - 1] >= 3 : r.value.pages[r.value.pages.length - 1] < s.value - 1), V = b(() => n.value ? r.value.pages[0] < s.value : r.value.pages[0] >= 2), U = b(() => n.value ? r.value.pages[r.value.pages.length - 1] >= 2 : r.value.pages[r.value.pages.length - 1] < s.value), m = b(() => t.value !== 1), S = b(() => t.value !== s.value);
     if (a.type === "link" && a.linkUrl === "#")
       throw console.error("linkUrl attribute is required if type attribute is 'link'"), new TypeError(
         "linkUrl attribute is required if type attribute is 'link'"
       );
     if (a.type === "link" && !a.linkUrl.includes("[page]"))
       throw console.error("linkUrl attribute must contain '[page]' substring"), new TypeError("linkUrl attribute must contain '[page]' substring");
-    return (n, i) => (d(), b("ul", {
-      class: o(t.paginationContainerClass)
+    return (l, i) => (d(), v("ul", {
+      class: o(e.paginationContainerClass)
     }, [
-      t.showEndingButtons && M.value ? (d(), b("li", {
+      e.showEndingButtons && M.value ? (d(), v("li", {
         key: 0,
         class: o([
-          t.firstPageItemClass,
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          m.value ? "" : t.disabledPaginateItemsClass
+          e.firstPageItemClass,
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          m.value ? "" : e.disabledPaginateItemsClass
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
-          href: C(l.value ? u.value : 1),
-          onClick: i[0] || (i[0] = c((r) => v(l.value ? u.value : 1), ["prevent"])),
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
+          href: C(n.value ? s.value : 1),
+          onClick: i[0] || (i[0] = c((g) => f(n.value ? s.value : 1), ["prevent"])),
           class: o([
-            t.firstPageButtonClass,
-            t.paginateButtonsClass,
-            t.disablePagination ? t.disabledPaginateButtonsClass : ""
+            e.firstPageButtonClass,
+            e.paginateButtonsClass,
+            e.disablePagination ? e.disabledPaginateButtonsClass : ""
           ]),
-          disabled: m.value === !1 ? !0 : t.disablePagination
+          disabled: m.value === !1 ? !0 : e.disablePagination
         }, {
           default: k(() => [
-            I(n.$slots, "first-page-button", {}, () => [
-              y(h(t.firstPageContent), 1)
+            I(l.$slots, "first-page-button", {}, () => [
+              y(h(e.firstPageContent), 1)
             ], !0)
           ]),
           _: 3
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      t.showJumpButtons && M.value ? (d(), b("li", {
+      e.showJumpButtons && M.value ? (d(), v("li", {
         key: 1,
         class: o([
-          t.backwardJumpItemClass,
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          m.value ? "" : t.disabledPaginateItemsClass
+          e.backwardJumpItemClass,
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          m.value ? "" : e.disabledPaginateItemsClass
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
           href: C(
-            l.value ? e.value + Math.ceil(t.maxPagesShown / 2) : e.value - Math.ceil(t.maxPagesShown / 2)
+            n.value ? t.value + Math.ceil(e.maxPagesShown / 2) : t.value - Math.ceil(e.maxPagesShown / 2)
           ),
-          onClick: i[1] || (i[1] = c((r) => v(
-            l.value ? e.value + Math.ceil(t.maxPagesShown / 2) : e.value - Math.ceil(t.maxPagesShown / 2)
+          onClick: i[1] || (i[1] = c((g) => f(
+            n.value ? t.value + Math.ceil(e.maxPagesShown / 2) : t.value - Math.ceil(e.maxPagesShown / 2)
           ), ["prevent"])),
           class: o([
-            t.backwardJumpButtonClass,
-            t.paginateButtonsClass,
-            t.disablePagination ? t.disabledPaginateButtonsClass : "",
-            t.disablePagination ? t.disabledBackwardJumpButtonClass : "",
-            m.value === !1 ? t.disabledPaginateButtonsClass + " " + t.disabledBackwardJumpButtonClass : ""
+            e.backwardJumpButtonClass,
+            e.paginateButtonsClass,
+            e.disablePagination ? e.disabledPaginateButtonsClass : "",
+            e.disablePagination ? e.disabledBackwardJumpButtonClass : "",
+            m.value === !1 ? e.disabledPaginateButtonsClass + " " + e.disabledBackwardJumpButtonClass : ""
           ]),
-          disabled: m.value === !1 ? !0 : t.disablePagination
+          disabled: m.value === !1 ? !0 : e.disablePagination
         }, {
           default: k(() => [
-            I(n.$slots, "backward-jump-button", {}, () => [
-              y(h(t.backwardJumpButtonContent), 1)
+            I(l.$slots, "backward-jump-button", {}, () => [
+              y(h(e.backwardJumpButtonContent), 1)
             ], !0)
           ]),
           _: 3
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      !t.hidePrevNext && N.value ? (d(), b("li", {
+      !e.hidePrevNext && T.value ? (d(), v("li", {
         key: 2,
         class: o([
-          t.backItemClass,
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          m.value ? "" : t.disabledPaginateItemsClass
+          e.backItemClass,
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          m.value ? "" : e.disabledPaginateItemsClass
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
-          href: C(l.value ? e.value + 1 : e.value - 1),
-          onClick: i[2] || (i[2] = c((r) => v(l.value ? e.value + 1 : e.value - 1), ["prevent"])),
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
+          href: C(n.value ? t.value + 1 : t.value - 1),
+          onClick: i[2] || (i[2] = c((g) => f(n.value ? t.value + 1 : t.value - 1), ["prevent"])),
           class: o([
-            t.backButtonClass,
-            t.paginateButtonsClass,
-            t.disablePagination ? t.disabledPaginateButtonsClass : "",
-            t.disablePagination ? t.disabledBackButtonClass : "",
-            m.value === !1 ? t.disabledPaginateButtonsClass + " " + t.disabledBackButtonClass : ""
+            e.backButtonClass,
+            e.paginateButtonsClass,
+            e.disablePagination ? e.disabledPaginateButtonsClass : "",
+            e.disablePagination ? e.disabledBackButtonClass : "",
+            m.value === !1 ? e.disabledPaginateButtonsClass + " " + e.disabledBackButtonClass : ""
           ]),
-          disabled: m.value === !1 ? !0 : t.disablePagination
+          disabled: m.value === !1 ? !0 : e.disablePagination
         }, {
           default: k(() => [
-            I(n.$slots, "prev-button", {}, () => [
-              y(h(t.prevButtonContent), 1)
+            I(l.$slots, "prev-button", {}, () => [
+              y(h(e.prevButtonContent), 1)
             ], !0)
           ]),
           _: 3
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      t.showBreakpointButtons && V.value ? (d(), b("li", {
+      e.showBreakpointButtons && V.value ? (d(), v("li", {
         key: 3,
         class: o([
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          m.value ? "" : t.disabledPaginateItemsClass
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          m.value ? "" : e.disabledPaginateItemsClass
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
-          href: C(l.value ? u.value : 1),
-          onClick: i[3] || (i[3] = c((r) => v(l.value ? u.value : 1), ["prevent"])),
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
+          href: C(n.value ? s.value : 1),
+          onClick: i[3] || (i[3] = c((g) => f(n.value ? s.value : 1), ["prevent"])),
           class: o([
-            t.paginateButtonsClass,
-            t.disablePagination ? t.disabledPaginateButtonsClass : "",
-            t.disablePagination ? t.disabledPaginateButtonsClass : "",
-            m.value === !1 ? t.disabledPaginateButtonsClass + " " + t.disabledPaginateButtonsClass : ""
+            e.paginateButtonsClass,
+            e.disablePagination ? e.disabledPaginateButtonsClass : "",
+            e.disablePagination ? e.disabledPaginateButtonsClass : "",
+            m.value === !1 ? e.disabledPaginateButtonsClass + " " + e.disabledPaginateButtonsClass : ""
           ]),
-          disabled: t.disablePagination
+          disabled: e.disablePagination
         }, {
           default: k(() => [
-            y(h(l.value ? $(u.value) : $(1)), 1)
+            y(h(n.value ? $(s.value) : $(1)), 1)
           ]),
           _: 1
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      t.showBreakpointButtons && j.value ? (d(), b("li", {
+      e.showBreakpointButtons && L.value ? (d(), v("li", {
         key: 4,
         class: o([
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          m.value ? "" : t.disabledPaginateItemsClass
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          m.value ? "" : e.disabledPaginateItemsClass
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
           href: C(
-            t.disableBreakpointButtons ? e.value : l.value ? e.value + Math.ceil(t.maxPagesShown / 2) : e.value - Math.ceil(t.maxPagesShown / 2)
+            e.disableBreakpointButtons ? t.value : n.value ? t.value + Math.ceil(e.maxPagesShown / 2) : t.value - Math.ceil(e.maxPagesShown / 2)
           ),
-          onClick: i[4] || (i[4] = c((r) => v(
-            t.disableBreakpointButtons ? e.value : l.value ? e.value + Math.ceil(t.maxPagesShown / 2) : e.value - Math.ceil(t.maxPagesShown / 2)
+          onClick: i[4] || (i[4] = c((g) => f(
+            e.disableBreakpointButtons ? t.value : n.value ? t.value + Math.ceil(e.maxPagesShown / 2) : t.value - Math.ceil(e.maxPagesShown / 2)
           ), ["prevent"])),
-          disabled: t.disableBreakpointButtons || t.disablePagination,
+          disabled: e.disableBreakpointButtons || e.disablePagination,
           class: o([
-            t.startingBreakpointButtonClass,
-            t.paginateButtonsClass,
-            t.disableBreakpointButtons || t.disablePagination ? `${t.disabledPaginateButtonsClass} ${t.disabledBreakPointButtonClass}` : ""
+            e.startingBreakpointButtonClass,
+            e.paginateButtonsClass,
+            e.disableBreakpointButtons || e.disablePagination ? `${e.disabledPaginateButtonsClass} ${e.disabledBreakPointButtonClass}` : ""
           ])
         }, {
           default: k(() => [
-            I(n.$slots, "starting-breakpoint-button", {}, () => [
-              y(h(t.startingBreakpointContent), 1)
+            I(l.$slots, "starting-breakpoint-button", {}, () => [
+              y(h(e.startingBreakpointContent), 1)
             ], !0)
           ]),
           _: 3
         }, 8, ["href", "disabled", "class"]))
       ], 2)) : w("", !0),
-      (d(!0), b(F, null, A(g.value.pages, (r, x) => (d(), b("li", {
+      (d(!0), v(A, null, H(r.value.pages, (g, x) => (d(), v("li", {
         key: x,
         class: o([
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          r === e.value ? t.activeItemClass : ""
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          g === t.value ? e.activeItemClass : ""
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
-          href: C(r),
-          onClick: c(() => v(r), ["prevent"]),
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
+          href: C(g),
+          onClick: c(() => f(g), ["prevent"]),
           class: o([
-            t.paginateButtonsClass,
-            t.numberButtonsClass,
-            r === e.value ? t.activePageClass : "",
-            t.disablePagination ? t.disabledPaginateButtonsClass : ""
+            e.paginateButtonsClass,
+            e.numberButtonsClass,
+            g === t.value ? e.activePageClass : "",
+            e.disablePagination ? e.disabledPaginateButtonsClass : ""
           ]),
-          disabled: t.disablePagination
+          disabled: e.disablePagination
         }, {
           default: k(() => [
-            y(h($(r)), 1)
+            y(h($(g)), 1)
           ]),
           _: 2
         }, 1032, ["href", "onClick", "class", "disabled"]))
       ], 2))), 128)),
-      t.showBreakpointButtons && L.value ? (d(), b("li", R, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
+      e.showBreakpointButtons && D.value ? (d(), v("li", R, [
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
           href: C(
-            t.disableBreakpointButtons ? e.value : l.value ? e.value - Math.ceil(t.maxPagesShown / 2) : e.value + Math.ceil(t.maxPagesShown / 2)
+            e.disableBreakpointButtons ? t.value : n.value ? t.value - Math.ceil(e.maxPagesShown / 2) : t.value + Math.ceil(e.maxPagesShown / 2)
           ),
-          onClick: i[5] || (i[5] = c((r) => v(
-            t.disableBreakpointButtons ? e.value : l.value ? e.value - Math.ceil(t.maxPagesShown / 2) : e.value + Math.ceil(t.maxPagesShown / 2)
+          onClick: i[5] || (i[5] = c((g) => f(
+            e.disableBreakpointButtons ? t.value : n.value ? t.value - Math.ceil(e.maxPagesShown / 2) : t.value + Math.ceil(e.maxPagesShown / 2)
           ), ["prevent"])),
-          disabled: t.disableBreakpointButtons || t.disablePagination,
+          disabled: e.disableBreakpointButtons || e.disablePagination,
           class: o([
-            t.endingBreakPointButtonClass,
-            t.paginateButtonsClass,
-            t.disableBreakpointButtons || t.disablePagination ? `${t.disabledPaginateButtonsClass} ${t.disabledBreakPointButtonClass}` : ""
+            e.endingBreakPointButtonClass,
+            e.paginateButtonsClass,
+            e.disableBreakpointButtons || e.disablePagination ? `${e.disabledPaginateButtonsClass} ${e.disabledBreakPointButtonClass}` : ""
           ])
         }, {
           default: k(() => [
-            I(n.$slots, "ending-breakpoint-button", {}, () => [
-              y(h(t.endingBreakpointButtonContent), 1)
+            I(l.$slots, "ending-breakpoint-button", {}, () => [
+              y(h(e.endingBreakpointButtonContent), 1)
             ], !0)
           ]),
           _: 3
         }, 8, ["href", "disabled", "class"]))
       ])) : w("", !0),
-      t.showBreakpointButtons && U.value ? (d(), b("li", H, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
-          href: C(l.value ? 1 : u.value),
-          onClick: i[6] || (i[6] = c((r) => v(l.value ? 1 : u.value), ["prevent"])),
+      e.showBreakpointButtons && U.value ? (d(), v("li", O, [
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
+          href: C(n.value ? 1 : s.value),
+          onClick: i[6] || (i[6] = c((g) => f(n.value ? 1 : s.value), ["prevent"])),
           class: o([
-            t.lastButtonClass,
-            t.paginateButtonsClass,
-            t.disablePagination ? t.disabledPaginateButtonsClass : "",
-            t.disablePagination ? t.disabledLastButtonClass : ""
+            e.paginateButtonsClass,
+            e.disablePagination ? e.disabledPaginateButtonsClass : "",
+            e.disablePagination ? e.disabledLastButtonClass : ""
           ]),
-          disabled: t.disablePagination
+          disabled: e.disablePagination
         }, {
           default: k(() => [
-            y(h(l.value ? $(1) : $(u.value)), 1)
+            y(h(n.value ? $(1) : $(s.value)), 1)
           ]),
           _: 1
         }, 8, ["href", "class", "disabled"]))
       ])) : w("", !0),
-      !t.hidePrevNext && T.value ? (d(), b("li", {
+      !e.hidePrevNext && j.value ? (d(), v("li", {
         key: 7,
         class: o([
-          t.nextItemClass,
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          S.value ? "" : t.disabledPaginateItemsClass
+          e.nextItemClass,
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          S.value ? "" : e.disabledPaginateItemsClass
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
-          href: C(l.value ? e.value - 1 : e.value + 1),
-          onClick: i[7] || (i[7] = c((r) => v(l.value ? e.value - 1 : e.value + 1), ["prevent"])),
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
+          href: C(n.value ? t.value - 1 : t.value + 1),
+          onClick: i[7] || (i[7] = c((g) => f(n.value ? t.value - 1 : t.value + 1), ["prevent"])),
           class: o([
-            t.paginateButtonsClass,
-            t.nextButtonClass,
-            t.disablePagination ? t.disabledPaginateButtonsClass : "",
-            t.disablePagination ? t.disabledNextButtonClass : "",
-            S.value === !1 ? t.disabledPaginateButtonsClass + " " + t.disabledNextButtonClass : ""
+            e.paginateButtonsClass,
+            e.nextButtonClass,
+            e.disablePagination ? e.disabledPaginateButtonsClass : "",
+            e.disablePagination ? e.disabledNextButtonClass : "",
+            S.value === !1 ? e.disabledPaginateButtonsClass + " " + e.disabledNextButtonClass : ""
           ]),
-          disabled: S.value === !1 ? !0 : t.disablePagination
+          disabled: S.value === !1 ? !0 : e.disablePagination
         }, {
           default: k(() => [
-            I(n.$slots, "next-button", {}, () => [
-              y(h(t.nextButtonContent), 1)
+            I(l.$slots, "next-button", {}, () => [
+              y(h(e.nextButtonContent), 1)
             ], !0)
           ]),
           _: 3
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      t.showJumpButtons && M.value ? (d(), b("li", {
+      e.showJumpButtons && E.value ? (d(), v("li", {
         key: 8,
         class: o([
-          t.forwardJumpItemClass,
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          S.value ? "" : t.disabledPaginateItemsClass
+          e.forwardJumpItemClass,
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          S.value ? "" : e.disabledPaginateItemsClass
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
           href: C(
-            l.value ? e.value - Math.ceil(t.maxPagesShown / 2) : e.value + Math.ceil(t.maxPagesShown / 2)
+            n.value ? t.value - Math.ceil(e.maxPagesShown / 2) : t.value + Math.ceil(e.maxPagesShown / 2)
           ),
-          onClick: i[8] || (i[8] = c((r) => v(
-            l.value ? e.value - Math.ceil(t.maxPagesShown / 2) : e.value + Math.ceil(t.maxPagesShown / 2)
+          onClick: i[8] || (i[8] = c((g) => f(
+            n.value ? t.value - Math.ceil(e.maxPagesShown / 2) : t.value + Math.ceil(e.maxPagesShown / 2)
           ), ["prevent"])),
           class: o([
-            t.forwardJumpButtonClass,
-            t.paginateButtonsClass,
-            t.disablePagination ? t.disabledPaginateButtonsClass : "",
-            t.disablePagination ? t.disabledForwardJumpButtonClass : "",
-            S.value === !1 ? t.disabledPaginateButtonsClass + " " + t.disabledForwardJumpButtonClass : ""
+            e.forwardJumpButtonClass,
+            e.paginateButtonsClass,
+            e.disablePagination ? e.disabledPaginateButtonsClass : "",
+            e.disablePagination ? e.disabledForwardJumpButtonClass : "",
+            S.value === !1 ? e.disabledPaginateButtonsClass + " " + e.disabledForwardJumpButtonClass : ""
           ]),
-          disabled: S.value === !1 ? !0 : t.disablePagination
+          disabled: S.value === !1 ? !0 : e.disablePagination
         }, {
           default: k(() => [
-            I(n.$slots, "forward-jump-button", {}, () => [
-              y(h(t.forwardJumpButtonContent), 1)
+            I(l.$slots, "forward-jump-button", {}, () => [
+              y(h(e.forwardJumpButtonContent), 1)
             ], !0)
           ]),
           _: 3
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      t.showEndingButtons && M.value ? (d(), b("li", {
+      e.showEndingButtons && E.value ? (d(), v("li", {
         key: 9,
         class: o([
-          t.lastPageItemClass,
-          t.paginateItemsClass,
-          t.disablePagination ? t.disabledPaginateItemsClass : "",
-          S.value ? "" : t.disabledPaginateItemsClass
+          e.lastPageItemClass,
+          e.paginateItemsClass,
+          e.disablePagination ? e.disabledPaginateItemsClass : "",
+          S.value ? "" : e.disabledPaginateItemsClass
         ])
       }, [
-        (d(), B(P(t.type === "button" ? "button" : "a"), {
-          href: C(l.value ? 1 : u.value),
-          onClick: i[9] || (i[9] = c((r) => v(l.value ? 1 : u.value), ["prevent"])),
+        (d(), B(P(e.type === "button" ? "button" : "a"), {
+          href: C(n.value ? 1 : s.value),
+          onClick: i[9] || (i[9] = c((g) => f(n.value ? 1 : s.value), ["prevent"])),
           class: o([
-            t.lastPageButtonClass,
-            t.paginateButtonsClass,
-            t.disablePagination ? t.disabledPaginateButtonsClass : "",
-            S.value === !1 ? t.disabledPaginateButtonsClass + " " + t.disabledLastButtonClass : ""
+            e.lastPageButtonClass,
+            e.paginateButtonsClass,
+            e.disablePagination ? e.disabledPaginateButtonsClass : "",
+            S.value === !1 ? e.disabledPaginateButtonsClass + " " + e.disabledLastButtonClass : ""
           ]),
-          disabled: S.value === !1 ? !0 : t.disablePagination
+          disabled: S.value === !1 ? !0 : e.disablePagination
         }, {
           default: k(() => [
-            I(n.$slots, "last-page-button", {}, () => [
-              y(h(t.lastPageContent), 1)
+            I(l.$slots, "last-page-button", {}, () => [
+              y(h(e.lastPageContent), 1)
             ], !0)
           ]),
           _: 3
@@ -626,12 +622,12 @@ const R = { key: 5 }, H = { key: 6 }, O = /* @__PURE__ */ D({
       ], 2)) : w("", !0)
     ], 2));
   }
-}), z = (t, s) => {
-  const a = t.__vccOpts || t;
-  for (const [e, J] of s)
-    a[e] = J;
+}), Z = (e, u) => {
+  const a = e.__vccOpts || e;
+  for (const [t, J] of u)
+    a[t] = J;
   return a;
-}, G = /* @__PURE__ */ z(O, [["__scopeId", "data-v-b5627d82"]]);
+}, K = /* @__PURE__ */ Z(z, [["__scopeId", "data-v-03817d3f"]]);
 export {
-  G as default
+  K as default
 };

@@ -493,11 +493,8 @@ const lastButtonIfCondition = computed(() => {
   );
 });
 const firstPageButtonIfCondition = computed(() => {
-  if (isRtl.value) {
-    return paginate.value.pages[0] < totalPages.value;
-  }
-
-  return paginate.value.pages[0] >= 2;
+  if (currentPageRef.value === 1) return false;
+  return true;
 });
 const lastPageButtonIfCondition = computed(() => {
   if (currentPageRef.value === totalPages.value) return false;
