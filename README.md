@@ -8,15 +8,19 @@
 
 [![npm version](https://img.shields.io/npm/v/z-vue-pagination.svg)](http://badge.fury.io/js/z-vue-pagination) [![npm downloads](https://img.shields.io/npm/dm/z-vue-pagination.svg)](http://badge.fury.io/js/z-vue-pagination) [![License](https://img.shields.io/badge/License-MIT-blue)](https://github.com/bilaldanny/z-vue-pagination/blob/main/LICENSE)
 
-Z Vue Paginate is a modern and powerfull vue js pagination library with a large set of various pagination components that are flexible, very lightweight, SEO friendly, customizable with pure CSS and very easy to use.
+z-vue-pagination is a lightweight and flexible Vue 3 pagination component. It simplifies navigating large datasets with customizable options for seamless integration into any project.
 
 ## Key Features
+
+- Lightweight and fast.
+
+- Supports dynamic datasets and server-side pagination.
 
 - All pagination functionalities are built in to the package with 0 dependants.
 
 - Various different types of pagination components that you can enable or disable according to your needs, and what suits your website best.
 
-- Complete customization support for every component using pure CSS.
+- Customizable appearance and behavior.
 
 - Complete RTL support.
 
@@ -24,7 +28,7 @@ Z Vue Paginate is a modern and powerfull vue js pagination library with a large 
 
 - Different localizations support.
 
-- Package is built with typescript and vite with complete support for vue.js (3x)
+- Easy integration with Vue 3
 
 &nbsp;
 
@@ -97,7 +101,9 @@ import ZVuePagination from 'z-vue-pagination';
 
 // Register the package
 
-createApp(App).use(ZVuePagination).mount("#app");
+createApp(App)
+  .component("z-vue-pagination", ZVuePagination)
+  .mount("#app");
 ```
 
 Local Import Component
