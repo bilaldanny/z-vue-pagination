@@ -352,9 +352,12 @@ const navigationHandler = (page: number) => {
 // ----------------------------- //
 // ---> Computed properties <--- //
 // ----------------------------- //
+
+const totalItems = computed(() => props.totalItems === 0 ? 1 : props.totalItems);
+
 //calculating total pages
 const totalPages = computed(() =>
-  Math.ceil(props.totalItems / props.itemsPerPage)
+  Math.ceil(totalItems.value / props.itemsPerPage)
 );
 // Pagination logic
 const paginate = computed(() => {

@@ -1,5 +1,5 @@
-import { defineComponent as F, toRef as q, computed as b, openBlock as d, createElementBlock as v, normalizeClass as o, createBlock as B, resolveDynamicComponent as P, withModifiers as c, withCtx as k, renderSlot as I, createTextVNode as y, toDisplayString as h, createCommentVNode as w, Fragment as A, renderList as H } from "vue";
-const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
+import { defineComponent as q, toRef as A, computed as b, openBlock as d, createElementBlock as v, normalizeClass as o, createBlock as B, resolveDynamicComponent as P, withModifiers as c, withCtx as k, renderSlot as I, createTextVNode as y, toDisplayString as h, createCommentVNode as w, Fragment as H, renderList as R } from "vue";
+const O = { key: 5 }, z = { key: 6 }, Z = /* @__PURE__ */ q({
   __name: "pagination",
   props: {
     // Configuration props
@@ -276,7 +276,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
       );
     if (!a.modelValue)
       throw new TypeError("v-model is required for the paginate component.");
-    const t = q(a, "modelValue"), J = u, f = (l) => {
+    const t = A(a, "modelValue"), J = u, f = (l) => {
       l !== t.value && (l > s.value || l < 1 || a.disablePagination || (J("update:modelValue", l), J("click", l)));
     }, $ = (l) => {
       switch (a.locale) {
@@ -289,8 +289,8 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
         default:
           return l;
       }
-    }, C = (l) => a.type !== "link" ? "" : a.linkUrl.replace("[page]", l.toString()), s = b(
-      () => Math.ceil(a.totalItems / a.itemsPerPage)
+    }, C = (l) => a.type !== "link" ? "" : a.linkUrl.replace("[page]", l.toString()), T = b(() => a.totalItems === 0 ? 1 : a.totalItems), s = b(
+      () => Math.ceil(T.value / a.itemsPerPage)
     ), r = b(() => {
       let l, i;
       if (s.value <= a.maxPagesShown)
@@ -311,7 +311,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
         endPage: i,
         pages: g
       };
-    }), n = b(() => a.dir === "rtl"), T = b(() => a.showDisabled == !0 ? !0 : n.value ? t.value !== s.value : t.value !== 1), j = b(() => a.showDisabled == !0 ? !0 : n.value ? t.value !== 1 : t.value !== s.value), L = b(() => n.value ? r.value.pages[0] < s.value - 1 : r.value.pages[0] >= 3), M = b(() => a.showDisabled == !0 ? !0 : n.value ? r.value.pages[0] < s.value : r.value.pages[0] >= 2), E = b(() => a.showDisabled == !0 ? !0 : n.value ? r.value.pages[r.value.pages.length - 1] >= 2 : r.value.pages[r.value.pages.length - 1] < s.value), D = b(() => n.value ? r.value.pages[r.value.pages.length - 1] >= 3 : r.value.pages[r.value.pages.length - 1] < s.value - 1), V = b(() => n.value ? r.value.pages[0] < s.value : r.value.pages[0] >= 2), U = b(() => n.value ? r.value.pages[r.value.pages.length - 1] >= 2 : r.value.pages[r.value.pages.length - 1] < s.value), m = b(() => t.value !== 1), S = b(() => t.value !== s.value);
+    }), n = b(() => a.dir === "rtl"), j = b(() => a.showDisabled == !0 ? !0 : n.value ? t.value !== s.value : t.value !== 1), L = b(() => a.showDisabled == !0 ? !0 : n.value ? t.value !== 1 : t.value !== s.value), D = b(() => n.value ? r.value.pages[0] < s.value - 1 : r.value.pages[0] >= 3), M = b(() => a.showDisabled == !0 ? !0 : n.value ? r.value.pages[0] < s.value : r.value.pages[0] >= 2), E = b(() => a.showDisabled == !0 ? !0 : n.value ? r.value.pages[r.value.pages.length - 1] >= 2 : r.value.pages[r.value.pages.length - 1] < s.value), V = b(() => n.value ? r.value.pages[r.value.pages.length - 1] >= 3 : r.value.pages[r.value.pages.length - 1] < s.value - 1), U = b(() => n.value ? r.value.pages[0] < s.value : r.value.pages[0] >= 2), F = b(() => n.value ? r.value.pages[r.value.pages.length - 1] >= 2 : r.value.pages[r.value.pages.length - 1] < s.value), m = b(() => t.value !== 1), S = b(() => t.value !== s.value);
     if (a.type === "link" && a.linkUrl === "#")
       throw console.error("linkUrl attribute is required if type attribute is 'link'"), new TypeError(
         "linkUrl attribute is required if type attribute is 'link'"
@@ -381,7 +381,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
           _: 3
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      !e.hidePrevNext && T.value ? (d(), v("li", {
+      !e.hidePrevNext && j.value ? (d(), v("li", {
         key: 2,
         class: o([
           e.backItemClass,
@@ -410,7 +410,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
           _: 3
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      e.showBreakpointButtons && V.value ? (d(), v("li", {
+      e.showBreakpointButtons && U.value ? (d(), v("li", {
         key: 3,
         class: o([
           e.paginateItemsClass,
@@ -435,7 +435,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
           _: 1
         }, 8, ["href", "class", "disabled"]))
       ], 2)) : w("", !0),
-      e.showBreakpointButtons && L.value ? (d(), v("li", {
+      e.showBreakpointButtons && D.value ? (d(), v("li", {
         key: 4,
         class: o([
           e.paginateItemsClass,
@@ -465,7 +465,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
           _: 3
         }, 8, ["href", "disabled", "class"]))
       ], 2)) : w("", !0),
-      (d(!0), v(A, null, H(r.value.pages, (g, x) => (d(), v("li", {
+      (d(!0), v(H, null, R(r.value.pages, (g, x) => (d(), v("li", {
         key: x,
         class: o([
           e.paginateItemsClass,
@@ -490,7 +490,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
           _: 2
         }, 1032, ["href", "onClick", "class", "disabled"]))
       ], 2))), 128)),
-      e.showBreakpointButtons && D.value ? (d(), v("li", R, [
+      e.showBreakpointButtons && V.value ? (d(), v("li", O, [
         (d(), B(P(e.type === "button" ? "button" : "a"), {
           href: C(
             e.disableBreakpointButtons ? t.value : n.value ? t.value - Math.ceil(e.maxPagesShown / 2) : t.value + Math.ceil(e.maxPagesShown / 2)
@@ -513,7 +513,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
           _: 3
         }, 8, ["href", "disabled", "class"]))
       ])) : w("", !0),
-      e.showBreakpointButtons && U.value ? (d(), v("li", O, [
+      e.showBreakpointButtons && F.value ? (d(), v("li", z, [
         (d(), B(P(e.type === "button" ? "button" : "a"), {
           href: C(n.value ? 1 : s.value),
           onClick: i[6] || (i[6] = c((g) => f(n.value ? 1 : s.value), ["prevent"])),
@@ -530,7 +530,7 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
           _: 1
         }, 8, ["href", "class", "disabled"]))
       ])) : w("", !0),
-      !e.hidePrevNext && j.value ? (d(), v("li", {
+      !e.hidePrevNext && L.value ? (d(), v("li", {
         key: 7,
         class: o([
           e.nextItemClass,
@@ -622,12 +622,12 @@ const R = { key: 5 }, O = { key: 6 }, z = /* @__PURE__ */ F({
       ], 2)) : w("", !0)
     ], 2));
   }
-}), Z = (e, u) => {
+}), G = (e, u) => {
   const a = e.__vccOpts || e;
   for (const [t, J] of u)
     a[t] = J;
   return a;
-}, K = /* @__PURE__ */ Z(z, [["__scopeId", "data-v-03817d3f"]]);
+}, Q = /* @__PURE__ */ G(Z, [["__scopeId", "data-v-816ffe48"]]);
 export {
-  K as default
+  Q as default
 };
